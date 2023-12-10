@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Predicting PCOS from Ultrasound images</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<h1>Predicting PCOS from Ultrasound images</h1>
+	<form>
+		<input type="file" id="image" accept="image/*">
+		<button type="button" onclick="predict()">Submit</button>
+	</form>
+	<div id="container">
+		<div id="uploaded_image">
+			<h2>Uploaded image</h2>
+			<img id="image_preview" src="" alt="Preview" width="224px" height="224px" style="display: none">
+		</div>
+		<div id="prediction">
+            <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+			<div id="prediction_values">
+                <h2>Prediction</h2>
+                <p id="prediction_value"></p>
+                <h2>Probability</h2>
+                <p id="score_value"></p>
+            </div>
+		</div>
+	</div>
+</body>
+</html>
